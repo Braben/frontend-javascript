@@ -16,3 +16,18 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
+
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+const director1: Directors = {
+  firstName: "Benjamin",
+  lastName: "Lamptey",
+  fullTimeEmployee: true,
+  location: "Accra",
+  numberOfReports: 5,
+  contract: true, // still allowed from Teacher’s index signature
+};
+
+console.log(director1);
