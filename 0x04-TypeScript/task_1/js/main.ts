@@ -31,3 +31,40 @@ const director1: Directors = {
 };
 
 console.log(director1);
+
+// Define the interface for the function
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (firstName, lastName): string => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+console.log(printTeacher("Benjamin", "Lamptey"));
+
+//interface for class
+interface StudentClass {
+  workOnHomework(): string;
+  displayName(): string;
+}
+// interface for constructor
+interface StudentContructor {
+  new (firstName: String, lastName: string): StudentClass;
+}
+
+// Class that implements the StudentClass interface
+class Student implements StudentClass {
+  constructor(public firstName: string, public lastName: string) {}
+  workOnHomework(): string {
+    return "Currently working";
+  }
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+// Example usage:
+const student = new Student("Benjamin", "Lamptey");
+console.log(student.displayName());
+console.log(student.workOnHomework());
