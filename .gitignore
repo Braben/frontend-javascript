@@ -45,4 +45,4 @@ logs/
 .env.test.local
 .env.production.local
 
-0x4-TypeScript/task_0/js/node_modules
+0x4-TypeScript/task_0/js/node_modules/

@@ -50,9 +50,9 @@ studentList.forEach((student) => {
 table.appendChild(tableBody);
 document.body.appendChild(table);
 
-// // Optional style
-// table.style.borderCollapse = "collapse";
-// table.querySelectorAll("th, td").forEach((cell) => {
-//   (cell as HTMLTableCellElement).style.border = "1px solid #333";
-//   (cell as HTMLTableCellElement).style.padding = "6px";
-// });
+// Optional style
+table.style.borderCollapse = "collapse";
+table.querySelectorAll("th, td").forEach((cell) => {
+  (cell as HTMLTableCellElement).style.border = "1px solid #333";
+  (cell as HTMLTableCellElement).style.padding = "6px";
+});
