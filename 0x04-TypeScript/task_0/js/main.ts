@@ -37,7 +37,7 @@ tableHead.appendChild(headerRow);
 table.appendChild(tableHead);
 
 // Rows
-studentList.forEach((student) => {
+studentsList.forEach((student) => {
   const row = document.createElement("tr");
   const firstNameCell = document.createElement("td");
   firstNameCell.textContent = student.firstName;
