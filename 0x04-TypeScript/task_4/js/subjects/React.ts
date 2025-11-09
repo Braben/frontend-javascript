@@ -2,24 +2,16 @@
 /// <reference path="Subject.ts" />
 
 namespace Subjects {
-  // Extend the Teacher interface using declaration merging
-  export interface Teacher {
-    experienceTeachingReact?: number; // Optional property
-  }
-}
-
-class React extends Subjects.Subject {
-  getRequirements(): string {
-    return "Here is the list of requirements for React";
-  }
-
-  getAvailableTeacher(): string {
-    if (
-      !this.teacher.experienceTeachingReact ||
-      this.teacher.experienceTeachingReact < 0
-    ) {
-      return "No available teacher";
+  export class React extends Subject {
+    getRequirements(): string {
+      return "Here is the list of requirements for React";
     }
-    return `Available Teacher: ${this.teacher.firstName}`;
+
+    getAvailableTeacher(): string {
+      if (!this.teacher || this.teacher.firstName === undefined) {
+        return "No available teacher";
+      }
+      return `Available Teacher: ${this.teacher.firstName}`;
+    }
   }
 }
